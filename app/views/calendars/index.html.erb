@@ -12,7 +12,7 @@
     <% @week_days.each do |day| %>
       <div class='item'>
         <div class='date'>
-          <% day[:month] %>/<% day[:date] %>
+          <%= day[:month] %>/<%= day[:date] %>/<%= day[:wdays]%>
         </div>
         <ul class='content'>
         <% if day[:plans].length != 0 %>
@@ -24,3 +24,9 @@
       </div>
     <% end %>
   </div>
+
+</div>
+
+<%#①ビューファイルに曜日のデータに紐づくキーを渡して表示できるようにする記述（index.html.erb）%>
+<%# 15行目の＜day[:date] ＞右隣に曜日を引っ張ってくる記述をしてあげたい%>
+
